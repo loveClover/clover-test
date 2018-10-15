@@ -1,0 +1,4 @@
+/* pages/user/information/information.wxss */
+@import "../user.wxss";
+
+.save-btn{height: 90rpx;width: 600rpx;border-radius: 10rpx;background: #ae00ae;line-height: 90rpx;color: #fff;text-align: center;margin: 0 auto;margin-bottom: 30rpx;}

@@ -1,0 +1,13 @@
+/* pages/message/message.wxss */
+.activity-list{padding: 0 30rpx;}
+.activity-item{padding: 25rpx 0;border-bottom:1px #F3F3F3 solid;overflow: auto;}
+.activity-list .activity-item:last-child{border:none;}
+.image-box{width:190rpx;height:128rpx;position:relative;float: left}
+.image-box image{height: 100%;width: 100%;}
+.info-box{width:480rpx;float: right;}
+.info-box view{overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.info-title{line-height: 44rpx;color: #353535;font-size: 16px;height: 44rpx;}
+.info-address{color: #666; font-size: 11px; line-height: 40rpx;min-height: 40rpx;}
+.info-time{color: #b7b7b7; line-height: 44rpx; height: 44rpx;font-size: 12px}
+
+.select{height: 60rpx;padding: 0 40rpx;border-radius: 30rpx;line-height: 60rpx;text-align: center;background: #ae00ae;display: inline-block;position: fixed;top: 100rpx;right: -30rpx;font-size: 14px;color: #fff;z-index: 5;}

@@ -1,0 +1,69 @@
+<!--pages/message/edit/edit.wxml-->
+<view class='info-box'>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>标题</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			{{activityInfo.title}}
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>所在城市</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker mode="region" bindchange="bindPickerThreeChange" value="{{activityInfo.city}}" custom-item="{{customItem}}" data-type='city'>
+				<view class="picker">
+					{{activityInfo.city[0]?(activityInfo.city[0]+','+activityInfo.city[1]+','+activityInfo.city[2]):'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>详细地址</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			{{activityInfo.address}}
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>日期</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker mode="date" value="{{activityInfo.date}}" bindchange="bindDateChange">
+				<view class="picker">
+					{{activityInfo.date?activityInfo.date:"待完善"}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>时间</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker mode="time" value="{{activityInfo.time}}" bindchange="bindTimeChange">
+				<view class="picker">
+					{{activityInfo.time?activityInfo.time:"待完善"}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item no-border'>
+		<view class='info-title'>图片</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text' catchtap='uploadImage'>
+			上传图片
+		</view>
+	</view>
+</view>
+<view class='image-title' wx:if="{{imageList.length>0}}">图片展示</view>
+<button open-type="getUserInfo" lang = "zh_CN" bindgetuserinfo = "onGotUserInfo"> 获取用户信息 </button>
+<view class='list-box' wx:if="{{imageList.length>0}}">
+	<view class='image-box' wx:for="{{imageList}}" wx:key="" catchtap='viewImage' data-url="{{item.url}}">
+		<image src="{{item.url}}" mode='aspectFill'></image>
+		<image class='delete-btn' src='../../../resource/icons/@2xX.svg' catchtap='deleteImage' data-id="{{index}}"></image>
+		<view class='move-btn pre-btn' catchtap='moveImage' data-id="{{index}}" data-type='pre' hidden="{{index==0}}">前移</view>
+		<view class='move-btn next-btn' catchtap='moveImage' data-id="{{index}}" data-type='next' hidden="{{index==imageList.length-1}}">后移</view>
+	</view> 
+</view>
+
+<view class='save-btn'>保存</view>

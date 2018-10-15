@@ -1,0 +1,217 @@
+<!--pages/user/information/information.wxml-->
+<view class='info-box'>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>昵称</view>
+		<view class='info-text'>待完善</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>性别</view>
+		<view class='info-text'>待完善</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>生日</view>
+		<view class='info-text'>待完善</view>
+	</view>
+
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>所在城市</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker mode="region" bindchange="bindPickerThreeChange" value="{{userInfo.city}}" custom-item="{{customItem}}" data-type='city'>
+				<view class="picker">
+					{{userInfo.city[0]?(userInfo.city[0]+','+userInfo.city[1]+','+userInfo.city[2]):'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>身高</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.height}}" data-type='height'>
+				<view class="picker">
+					{{userInfo.height?userInfo.height:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>月收入</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.income}}" data-type='income'>
+				<view class="picker">
+					{{userInfo.income?userInfo.income:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>学历</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.education}}" data-type='education'>
+				<view class="picker">
+					{{userInfo.education?userInfo.education:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>婚姻状况</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.ismarry}}" data-type='ismarry'>
+				<view class="picker">
+					{{userInfo.ismarry?userInfo.ismarry:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>有没有小孩</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.haschild}}" data-type='haschild'>
+				<view class="picker">
+					{{userInfo.haschild?userInfo.haschild:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>是否想要小孩</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.wantchild}}" data-type='wantchild'>
+				<view class="picker">
+					{{userInfo.wantchild?userInfo.wantchild:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>职业</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.work}}" data-type='work'>
+				<view class="picker">
+					{{userInfo.work?userInfo.work:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>买车情况</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.car}}" data-type='car'>
+				<view class="picker">
+					{{userInfo.car?userInfo.car:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'><view class='info-necessary'>*</view>买房情况</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.house}}" data-type='house'>
+				<view class="picker">
+					{{userInfo.house?userInfo.house:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+
+	<view class='info-item'>
+		<view class='info-title'>体重</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.weight}}" data-type='weight'>
+				<view class="picker">
+					{{userInfo.weight?userInfo.weight:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>体型</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.bodysize}}" data-type='bodysize'>
+				<view class="picker">
+					{{userInfo.bodysize?userInfo.bodysize:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>是否吸烟</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.smoke}}" data-type='smoke'>
+				<view class="picker">
+					{{userInfo.smoke?userInfo.smoke:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>是否喝酒</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.drink}}" data-type='drink'>
+				<view class="picker">
+					{{userInfo.drink?userInfo.drink:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>星座</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.constellation}}" data-type='constellation'>
+				<view class="picker">
+					{{userInfo.constellation?userInfo.constellation:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>名族</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.ethnic}}" data-type='ethnic'>
+				<view class="picker">
+					{{userInfo.ethnic?userInfo.ethnic:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>何时结婚</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.marrytime}}" data-type='marrytime'>
+				<view class="picker">
+					{{userInfo.marrytime?userInfo.marrytime:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class='info-item no-border'>
+		<view class='info-title'>信息展示</view>
+		<image class='info-icon' src='../../../resource/icons/right.svg'></image>
+		<view class='info-text'>
+			<picker bindchange="bindPickerOneChange" value="{{index}}" range="{{infoDetailArray.showinfo}}" data-type='showinfo'>
+				<view class="picker">
+					{{userInfo.showinfo?userInfo.showinfo:'待完善'}}
+				</view>
+			</picker>
+		</view>
+	</view>
+</view>
+
+<view class='save-btn'>保存</view>

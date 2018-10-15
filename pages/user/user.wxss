@@ -1,0 +1,18 @@
+/* pages/user/user.wxss */
+.header{padding: 30rpx 20rpx 30rpx;background: #ae00ae;height: 150rpx;}
+.header-img-box{float: left;height: 150rpx;width: 150rpx;border-radius: 10rpx;overflow: hidden;border:1px solid #fff;}
+.header-img-box image{height: 100%;width: 100%;}
+.header-text{float: left;padding-left: 20rpx;color: #fff;}
+.header-name{height: 60rpx;line-height: 100rpx;font-size: 12px;}
+.header-id{height: 40rpx;line-height: 40rpx;font-size: 10px;}
+
+.bar-list{display: flex; flex-direction: row; background: #fff; padding: 30rpx 0; margin-top: 30rpx;}
+.bar-list .bar-item{flex: auto; text-align: center;font-size: 12px;}
+
+.info-box{margin: 20rpx;border: 1px solid #eee;border-radius: 6rpx;box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.09);padding-left: 40rpx;}
+.info-item{height: 90rpx;border-bottom: 1px solid #ddd;font-size: 13px;line-height: 90rpx;padding-right: 25rpx;}
+.info-box .no-border{border:none;}
+.info-title{float: left;}
+.info-title .info-necessary{display: inline;color: red;}
+.info-icon{float: right;height: 30rpx;width: 30rpx;margin: 30rpx 0 30rpx 10rpx;}
+.info-text{float: right;font-size: 11px;}

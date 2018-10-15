@@ -1,0 +1,13 @@
+/* pages/message/edit/edit.wxss */
+@import "../../user/user.wxss";
+
+.image-title{margin: 20rpx;height: 30rpx;line-height: 30rpx;padding-left: 40rpx;font-size: 12px;}
+.list-box{margin: 20rpx;height: auto;}
+.image-box{width: 33.33%;height: 248rpx;padding: 1rpx;box-sizing: border-box;display: inline-block;position: relative;}
+.image-box image{height: 100%;width: 100%;vertical-align: middle;}
+.image-box .delete-btn{height: 26rpx;width: 26rpx;position: absolute;top: 1rpx;right: 1rpx;}
+.move-btn{position: absolute;height: 30rpx;width: auto;padding: 0 20rpx;line-height: 30rpx;font-size: 12px;bottom: 11rpx;background: rgba(0,0,0,0.1);color: #fff;text-align: center;border-radius: 15rpx;}
+.pre-btn{left: 30rpx;}
+.next-btn{right: 30rpx;}
+
+.save-btn{height: 90rpx;width: 600rpx;border-radius: 10rpx;background: #ae00ae;line-height: 90rpx;color: #fff;text-align: center;margin: 0 auto;margin-bottom: 30rpx;}

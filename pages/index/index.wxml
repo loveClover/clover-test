@@ -1,0 +1,29 @@
+<!--pages/index/index.wxml-->
+<view class='person-list'>
+	<view wx:for="{{dataList}}" wx:key='' class='person-item-box left' catchtap='viewPersonInfo' data-pid="{{index}}">
+		<view class='person-item'>
+			<image src='http://p72fmusth.bkt.clouddn.com/timg4.jpg' mode='aspectFill'></image>
+			<view class='person-info'>
+				<view class='name'>姓名{{item}}凯瑟琳</view>
+				<view class='address'>地址{{item}}皮城</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="no-more no-content" hidden="{{dataList.length>0}}">暂时还没有任何内容</view>
+<view class="no-more" hidden="{{dataList.length<1 || _status!='end'}}">没有更多的内容了</view>
+
+<view class='select' catchtap='showSelect' data-type='show'>筛选</view>
+<view class="select-bg {{isSelectShow?'select-bg-show':''}}" catchtap='showSelect' data-type='' id='select-bg'>
+	<view class="select-content" catchtap='showSelect' data-type='show'>
+		<block wx:for="{{infoArray}}" wx:key='' wx:for-item="itemArray" wx:for-index="itemArrayIndex">
+			<view class='select-title'>{{itemArray.title}}</view>
+			<view class='select-items'>
+				<view class="select-item {{selectedInfoArray[itemArrayIndex]==index?'selected-item':''}}" wx:for="{{itemArray.list}}" wx:key='' wx:for-item="item" wx:for-index="index" catchtap='changeSelectInfo' data-group="{{itemArrayIndex}}" data-item="{{index}}">{{item}}</view>
+			</view>
+		</block>
+		<view class='select-btn clear-btn' catchtap='clearSelect'>重置</view>
+		<view class='select-btn ok-btn' catchtap='checkSelect'>确定</view>
+	</view>
+</view>

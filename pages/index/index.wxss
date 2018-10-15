@@ -1,0 +1,27 @@
+/* pages/index/index.wxss */
+.person-list{width: 100%;overflow: auto;padding-bottom: 20rpx;font-size: 14px;}
+.person-item-box{width: 50%;height: 350rpx;float: left}
+.person-item{width: 96%;height: 98%;border-radius: 10rpx;margin: 2% 2% 0;overflow: hidden;position: relative;}
+.person-item image{width: 100%;height: 100%;}
+.person-info{width: 100%;height: 80rpx;background: rgba(0,0,0,0.2);position: absolute;left: 0;bottom: 
+0;padding-left: 10rpx;box-sizing: border-box;color: #fff;}
+.name{height: 46rpx;line-height: 46rpx;font-size: 14px;}
+.address{height: 34rpx;line-height: 34rpx;font-size: 12px;}
+
+
+.no-more{padding: 20rpx 0; text-align: center; color: #bbb;}
+.no-content{padding: 50rpx 0;}
+
+
+.select{height: 60rpx;padding: 0 40rpx;border-radius: 30rpx;line-height: 60rpx;text-align: center;background: #ae00ae;display: inline-block;position: fixed;top: 100rpx;right: -30rpx;font-size: 14px;color: #fff;z-index: 5;}
+.select-bg{position: fixed;left: 0;top: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.2);z-index: 10;transform: translateX(100%);transition: all 0.4s;}
+#select-bg.select-bg-show{transform: translateX(0)}
+.select-content{width: 90%;height: 100%;background: #fff;position: absolute;left: 10%;}
+.select-bg .select-content-show{transform: translateX(0);-webkit-transform:translateX(0);}
+.select-title{padding-left: 30rpx;height: 80rpx;line-height: 80rpx;font-size: 14px;color: #ae00ae}
+.select-items{overflow: auto;padding-left: 30rpx;}
+.select-item{display: inline-block;height: 60rpx;line-height: 60rpx;padding: 0 40rpx;background: #eee;color: #666;border-radius: 30rpx;font-size: 12px;margin: 0 20rpx 10rpx 0;}
+.select-items .selected-item{background: #a800a8;color: #fff;}
+.select-btn{height: 80rpx;width: 200rpx;line-height: 80rpx;text-align: center;font-size: 16px;border-radius: 50rpx;position: absolute;bottom: 20rpx;margin-left: -100rpx;}
+.clear-btn{left: 25%;background: #eee;color: #666;}
+.ok-btn{left: 75%;background: #ae00ae;color: #fff;}

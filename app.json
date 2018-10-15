@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/user/user",
+    "pages/error/authdeny",
+    "pages/index/person/person",
+    "pages/user/information/information",
+    "pages/user/mateinfo/mateinfo",
+    "pages/out/out",
+    "pages/message/detail/detail",
+    "pages/message/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ae00ae",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#B2B2B2",
+    "selectedColor": "#3C99F3",
+    "borderStyle": "#d5d5d5",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "iconPath": "resource/icons/recomm.png",
+        "selectedIconPath": "resource/icons/recomm-ed.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "resource/icons/subsc.png",
+        "selectedIconPath": "resource/icons/subsc-ed.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "iconPath": "resource/icons/user.png",
+        "selectedIconPath": "resource/icons/user-ed.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  }
+}

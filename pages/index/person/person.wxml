@@ -1,0 +1,33 @@
+<!--pages/index/person/person.wxml-->
+<view class='info-box'>
+	<view class='header-img'>
+		<image src="{{url}}" mode='aspectFill' catchtap='showImage' data-url="{{url}}"></image>
+	</view>
+	<view class='text-info'>
+		<view class='name'>凯瑟琳{{pid}}<view class='icon skybule'>♂</view><view class='icon pink'>♀</view></view>
+		<view class='info'>22岁丨156厘米丨硕士丨20001-50000元</view>
+	</view>
+</view>
+
+<scroll-view class='image-list' scroll-x>
+	<view class='img-item' wx:for="{{imageList}}" wx:key=''>
+		<image src="{{item}}" catchtap='showImage' data-url="{{item}}"></image>
+	</view>
+</scroll-view>
+
+<view class='details'>
+	<view class='detail-title'>爱情宣言</view>
+	<view class='detail-content'>
+		坏人总是太多,时间却又太少;一个狙击手最重要的工具就是精准,还有一把好武器;见识下法律的子弹吧
+	</view>
+
+	<view class='detail-title'>基本资料</view>
+	<view class='detail-lock'>该用户设置了仅会员可查看</view>
+
+	<view class='detail-title'>其他资料</view>
+	<view class='detail-lock'>该用户设置了仅会员可查看</view>
+
+	<view class='detail-title'>择偶条件</view>
+	<view class='detail-lock'>该用户设置了仅会员可查看</view>
+</view>
+	

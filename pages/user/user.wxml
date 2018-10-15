@@ -1,0 +1,61 @@
+<!--pages/user/user.wxml-->
+<view class='header'>
+	<view class='header-img-box'>
+		<image src='http://p72fmusth.bkt.clouddn.com/timg4.jpg' mode='aspectFill'></image>
+	</view>
+	<view class='header-text'>
+		<view class='header-name'>凯瑟琳</view>
+		<view class='header-id'>ID:6300</view>
+	</view>	
+</view>
+
+<view class='bar-list'>
+	<view class='bar-item'>我的钱包</view>
+	<view class='bar-item'>我的认证</view>
+	<navigator url="/pages/out/out" class='bar-item' hover-class="a-hover">我的资料</navigator>
+	<!-- <navigator url="/pages/user/information/information" class='bar-item' hover-class="a-hover">我的资料</navigator> -->
+</view>
+
+<view class='info-box'>
+	<view class='info-item'>
+		<view class='info-title'>谁看过我</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>关注我</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+	</view>
+	<view class='info-item no-border'>
+		<view class='info-title'>收到的礼物</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+	</view>
+</view>
+
+
+<view class='info-box'>
+	<navigator url="/pages/user/information/information" hover-class="a-hover" class='info-item'>
+		<view class='info-title'>基本资料</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+		<view class='info-text'>待完善</view>
+	</navigator>
+	<navigator url="/pages/user/mateinfo/mateinfo" hover-class="a-hover" class='info-item'>
+		<view class='info-title'>择偶条件</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+		<view class='info-text'>待完善</view>
+	</navigator>
+	<view class='info-item'>
+		<view class='info-title'>我的相册</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+		<view class='info-text'>待完善</view>
+	</view>
+	<view class='info-item'>
+		<view class='info-title'>爱情宣言</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+		<view class='info-text'>待完善</view>
+	</view>
+	<view class='info-item no-border'>
+		<view class='info-title'>联系方式</view>
+		<image class='info-icon' src='../../resource/icons/right.svg'></image>
+		<view class='info-text'>待完善</view>
+	</view>
+</view>

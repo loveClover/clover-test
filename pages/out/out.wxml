@@ -1,0 +1,2 @@
+<!--pages/out/out.wxml-->
+<span style="color:#ff0000;"><web-view src="https://wxtest3.youme.im"></web-view></span>

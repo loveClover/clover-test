@@ -1,0 +1,22 @@
+<!--pages/message/detail/detail.wxml-->
+<view class='detail-page'>
+	<view class='image-box'>
+		<image src="{{detail.image}}"></image>
+	</view>
+	<view class="content-box">
+		<view class='content-title'>{{detail.title}}</view>
+		<view class='content-time'>{{detail.time}}</view>
+		<view class='content-address'>{{detail.address}}</view>
+		<view class='content-desc'>{{detail.desc}}</view>
+	</view>
+	<view class='image-list'>
+		<view class='image-item' wx:for="{{detail.imageList}}" wx:key=''>
+			<image src="{{item.url}}" mode='widthFix' catchtap='viewImage' data-url="{{item.url}}"></image>
+		</view>
+	</view>
+</view>
+
+<view class='btn-box'>
+	<view class='btn-item edit' catchtap='editActivity'>编辑</view>
+	<view class='btn-item delete'>删除</view>
+</view>

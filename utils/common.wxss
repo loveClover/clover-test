@@ -1,0 +1,12 @@
+page{font-family: Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif; font-size: 14px; -webkit-tap-highlight-color:rgba(26,26,26,0); height: 100%;}
+page{background: #f5f7f9; color: #333;}
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { _height: 1%; }
+.textover { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; word-break:break-all;}
+
+.left{float: left;}
+.right{float: right;}
+.xbtn{border:0; background: transparent; box-shadow: none; padding: 0; border-radius: 0;}
+.xbtn:after{border:0;}
+

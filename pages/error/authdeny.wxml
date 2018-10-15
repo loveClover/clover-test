@@ -1,0 +1,10 @@
+<!--pages/error/authdeny.wxml-->
+<view class="container" hidden="{{ishide}}">
+  <view class="icon-box">
+    <view class="icon-warning"></view>
+  </view>
+
+  <view class="title">请求获取您微信授权</view>
+  <text class="desc">需要获取您的用户标识信息（昵称、头像等）用于小视频点赞，或评论等操作。</text>
+  <button type="primary" class="xbtn xbtn-default btn-setting" open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> 前往授权 </button>
+</view>
